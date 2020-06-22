@@ -47,7 +47,7 @@ namespace Service
 
         private static IEnumerable<Pessoa> MontarPessoaDeRetornoParaCatch(ArgumentException e)
         {
-            return new List<Pessoa>() { new Pessoa(e.Message, "teste@gmail.com", DateTime.Today) };
+            return new List<Pessoa>() { new Pessoa(e.Message, new Email("teste@gmail.com"), DateTime.Today) };
         }
 
         public bool PessoaAtivaParaSistema(long id) 

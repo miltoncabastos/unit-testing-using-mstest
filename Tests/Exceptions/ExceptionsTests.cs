@@ -20,7 +20,7 @@ namespace Tests.Exceptions
         {
             //Arrange 
             var nome = string.Empty;
-            var email = _faker.Internet.Email();
+            var email = new Email(_faker.Internet.Email());
             var ultimoAcesso = _faker.Date.Past(2);
 
             //Act and Assert

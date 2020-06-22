@@ -20,7 +20,7 @@ namespace Tests.Asserts
         {
             //Arrange 
             var nome = "Milton Bastos";
-            var email = "miltonbastos@gmail.com";
+            var email = new Email("miltonbastos@gmail.com");
             var ultimoAcesso = DateTime.Today;
 
             //Act
@@ -35,7 +35,7 @@ namespace Tests.Asserts
         {
             //Arrange 
             var nome = _faker.Person.FullName;
-            var email = _faker.Internet.Email();
+            var email = new Email(_faker.Internet.Email());
             var ultimoAcesso = DateTime.Today;
 
             //Act
@@ -50,7 +50,7 @@ namespace Tests.Asserts
         {
             //Arrange 
             var nome = _faker.Person.FullName;
-            var email = _faker.Internet.Email();
+            var email = new Email(_faker.Internet.Email());
             var ultimoAcesso = _faker.Date.Past(1);
 
             //Act

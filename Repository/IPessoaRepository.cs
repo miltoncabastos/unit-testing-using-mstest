@@ -6,6 +6,6 @@ namespace Repository
     public interface IPessoaRepository
     {
         IEnumerable<Pessoa> ObterTodasPessoas();
-        IEnumerable<Pessoa> ObterPessoaPorNomeEStatus(string nome, bool Ativo);
+        IEnumerable<Pessoa> ObterPessoaPorNomeEStatus(string nome, bool status);
     }
 }

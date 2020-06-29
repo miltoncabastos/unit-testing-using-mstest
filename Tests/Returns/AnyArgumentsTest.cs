@@ -37,6 +37,27 @@ namespace Tests.Returns
             Assert.AreEqual(100, pessoasAtivas.Count);
         }
 
+        [TestMethod()]
+        public void DicasDoMiltao()
+        {
+
+            var pessoaA = new Pessoa("miltão", "miltao@gmail.com", DateTime.Today);
+            var pessoaB = new Pessoa("fulana", "fulana@hotmail.com", DateTime.Today);
+
+            //Arrange
+            _pessoaRepository.ObterPessoaPorNomeEStatus(nome: Arg.Any<string>(), status: true).Returns(new List<Pessoa>() { pessoaA });
+            _pessoaRepository.ObterPessoaPorNomeEStatus(nome: pessoaB.Nome, status: Arg.Any<bool>()).Returns(new List<Pessoa>() { pessoaB });
+
+
+            //Act
+            var pessoasTesteA = _pessoaService.ObterPessoasPorNomeAtivas("PessoaQueDeveRetornarMiltão").FirstOrDefault();
+            var pessoasTesteB = _pessoaService.ObterPessoasPorNomeAtivas("fulana").FirstOrDefault();
+
+            //Assert
+            Assert.AreEqual(pessoasTesteA.Nome, pessoaA.Nome);
+            Assert.AreEqual(pessoasTesteB.Nome, pessoaB.Nome);
+        }
+
         [TestMethod("Setup Mock With Conditional Arguments")]
         public void SetupMockWithConditionalArguments()
         {

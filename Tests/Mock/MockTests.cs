@@ -52,6 +52,6 @@ namespace Tests.Mock
 
         private List<Pessoa> CriarListaDePessoas(DateTime ultimoAcesso) =>
             new Faker<Pessoa>().CustomInstantiator(
-                f => new Pessoa(f.Person.FullName, f.Internet.Email(f.Person.FirstName, f.Person.LastName), ultimoAcesso)).Generate(100);
+                f => new Pessoa(f.Person.FullName, new Email(f.Internet.Email()), ultimoAcesso)).Generate(100);
     }
 }

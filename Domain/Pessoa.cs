@@ -4,7 +4,7 @@ namespace Domain
 {
     public class Pessoa
     {
-        public Pessoa(string nome, string email, DateTime ultimoAcesso)
+        public Pessoa(string nome, Email email, DateTime ultimoAcesso)
         {
             Nome = nome;
             Email = email;
@@ -25,7 +25,7 @@ namespace Domain
             }
         }
 
-        public string Email { get; set; }
+        public Email Email { get; set; }
 
         public DateTime UltimoAcesso { get; set; }
 

@@ -1,7 +1,7 @@
 ﻿using Domain;
 using System.Collections.Generic;
 
-namespace Repository
+namespace Repository.Pessoas
 {
     public class PessoaRepository : IPessoaRepository
     {

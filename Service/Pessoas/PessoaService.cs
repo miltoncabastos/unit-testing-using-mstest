@@ -1,10 +1,10 @@
 ﻿using Domain;
-using Repository;
+using Repository.Pessoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Service
+namespace Service.Pessoas
 {
     public class PessoaService : IPessoaService
     {

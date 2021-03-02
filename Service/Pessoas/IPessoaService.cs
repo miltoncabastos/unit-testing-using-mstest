@@ -1,7 +1,7 @@
 ﻿using Domain;
 using System.Collections.Generic;
 
-namespace Service
+namespace Service.Pessoas
 {
     public interface IPessoaService
     {

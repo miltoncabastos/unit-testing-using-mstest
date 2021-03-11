@@ -2,8 +2,8 @@
 using Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-using Repository;
-using Service;
+using Repository.Pessoas;
+using Service.Pessoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,8 +41,8 @@ namespace Tests.Returns
         public void DicasDoMiltao()
         {
 
-            var pessoaA = new Pessoa("miltão", "miltao@gmail.com", DateTime.Today);
-            var pessoaB = new Pessoa("fulana", "fulana@hotmail.com", DateTime.Today);
+            var pessoaA = new Pessoa("miltão", new Email("miltao@gmail.com"), DateTime.Today);
+            var pessoaB = new Pessoa("fulana", new Email("fulana@hotmail.com"), DateTime.Today);
 
             //Arrange
             _pessoaRepository.ObterPessoaPorNomeEStatus(nome: Arg.Any<string>(), status: true).Returns(new List<Pessoa>() { pessoaA });

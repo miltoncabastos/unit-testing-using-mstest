@@ -7,5 +7,6 @@ namespace Repository.Pessoas
     {
         IEnumerable<Pessoa> ObterTodasPessoas();
         IEnumerable<Pessoa> ObterPessoaPorNomeEStatus(string nome, bool status);
+        
     }
 }

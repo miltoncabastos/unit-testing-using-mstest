@@ -9,9 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Curso.Domain.csproj" />
-    <ProjectReference Include="..\Repository\Curso.Repository.csproj" />
-    <ProjectReference Include="..\Service\Curso.Service.csproj" />
+    <ProjectReference Include="..\Curso.Core\Curso.Core.csproj" />
+    <ProjectReference Include="..\Curso.Domain\Curso.Domain.csproj" />
+    <ProjectReference Include="..\Curso.Repository\Curso.Repository.csproj" />
+    <ProjectReference Include="..\Curso.Service\Curso.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-using Repository;
-using Service;
+using Repository.Pessoas;
+using Service.Pessoas;
 using System;
 using System.Linq;
 
